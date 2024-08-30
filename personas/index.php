@@ -101,7 +101,7 @@ $resultado = mysqli_query($conn, $consulta);
                     <td style="vertical-align: middle;"><?php echo $columna['usuario']; ?></td>
                     <td style="vertical-align: middle;"><?php echo $columna['tipo_vehiculo']; ?></td>
                     <td>
-                    <a href="./listar_elemento.php?id=<?php echo $columna['id']; ?>" class="btn btn-outline-primary">IMPRIMIR RECIBO</a>
+                    <a href="./listar_elemento.php?id=<?php echo $columna['id']; ?>" class="btn btn-outline-primary">IMPRIMIR</a>
                         <a href="./procesardatos.php?btnEnviar=ELIMINAR&id=<?php echo $columna['id']; ?>" class="btn btn-outline-danger">ELIMINAR</a>
                     </td>
                 </tr>
