@@ -80,13 +80,14 @@ $resultado = mysqli_query($conn, $consulta);
         <div class="alert alert-primary text-center" role="alert">
             <h3>MENU DE PERSONAS</h3>
             <a class="btn btn-success" href="./formulario.php">AÑADIR CLIENTE</a>
+            <a class="btn btn-danger" href="./cerrar_sesion.php">CERRAR SESION</a>
         </div>
         <table class="table table-striped">
             <thead class="thead-light">
                 <tr>
                     <th>#</th>
                     <th style="vertical-align: middle;">NOMBRE COMPLETO</th> 
-                  
+                    <th style="vertical-align: middle;">TIPO DE VEHICULO</th> 
                 </tr>
             </thead>
             <tbody>
@@ -98,8 +99,10 @@ $resultado = mysqli_query($conn, $consulta);
                 <tr>
                     <td><?php echo $ndatos; ?></td>
                     <td style="vertical-align: middle;"><?php echo $columna['usuario']; ?></td>
-                   
+                    <td style="vertical-align: middle;"><?php echo $columna['tipo_vehiculo']; ?></td>
                     <td>
+                    <a href="./listar_elemento.php?id=<?php echo $columna['id']; ?>" class="btn btn-outline-primary">IMPRIMIR RECIBO</a>
+                        <a href="./procesardatos.php?btnEnviar=ELIMINAR&id=<?php echo $columna['id']; ?>" class="btn btn-outline-danger">ELIMINAR</a>
                     </td>
                 </tr>
                 <?php
